@@ -20,6 +20,6 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           script: |
-            cd /root/githubActionsDemo
+            cd ${{ secrets.PATH_TO_PROJECT }}
             git pull origin main
             docker compose up -d --build
